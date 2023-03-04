@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr"> <head>
-    <meta charset="utf-8">
-    <title>こんにちは</title>
+<html lang="ja" dir="ltr"> 
+  <head>
+  <meta charset="utf-8">
+  <title>Input Form Test App</title>
+    
   </head>
   <body>
-    Hello World!<br>
-    Templatesから読み込みまれました。
+    <style>
+      #wrapper {
+             text-align: center;
+                }
+            </style>
+      
+        <div id="wrapper">
+         <h1>文字を入力してください</h1>
+          <form method="post">
+              {{ forms.csrf_token }}
+      
+              {{ forms.InputFormTest.label }}<br>
+              {{ forms.InputFormTest }}<br>
+              <br>
+      
+              {{ forms.submit }}
+          </form>
+        </div>
+    {{message}}
   </body>
 </html>
